@@ -1,0 +1,110 @@
+@import 'var';
+@import 'reset';
+@import 'animate';
+
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.header {
+    
+    &__top {
+        background-color: $pri_color;
+        color: white;
+
+        .container { 
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid white;
+
+        }
+
+        &--right {
+            display: flex;
+            align-items: center;
+
+            font-size: 12px;
+        }
+
+        .nav {
+            display: inline-block;
+            padding: 0 12px;
+
+            line-height: 42px;
+            cursor: pointer;
+
+            i {
+                margin: 0 6px;
+                font-size: 14px;
+            }
+
+            &:hover {
+                opacity: 0.8;
+                transition: 0.2s;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        } 
+
+        .vertical-divider {
+            height: 25px;
+            width: 1px;
+            background-color: #ccc; 
+        } 
+
+        .drop-down { 
+            position: relative;
+
+            ul {
+                display: none;
+                width: 80%;
+                position: absolute;
+                top: 100%;
+                right: 20%;
+  
+                background-color: white;
+
+                text-align: center;
+                box-shadow: 0 2px 8px 2px #ccc;
+                line-height: normal;
+
+                border-radius: 4px;
+                animation: bounceInDown 0.2s ease-out;
+            }
+
+            a {
+                width: 100%;
+                display: inline-block;
+                padding: 6px 0;
+                color: black;
+
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+
+            &:hover {
+                opacity: 1;
+                ul {
+                    display: block;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .text {
+            font-size: 12px;
+            line-height: 42px;
+        }
+
+        a {
+            color: white;
+        }
+    }
+}

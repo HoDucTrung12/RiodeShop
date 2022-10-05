@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+@-webkit-keyframes bounceInDown {
+  from {
+    transform: translateY(-30%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInDown {
+  from {
+    transform: translateY(-30%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header__top {
+  background-color: rgb(0, 99, 209);
+  color: white;
+}
+.header__top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+.header__top--right {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.header__top .nav {
+  display: inline-block;
+  padding: 0 12px;
+  line-height: 42px;
+  cursor: pointer;
+}
+.header__top .nav i {
+  margin: 0 6px;
+  font-size: 14px;
+}
+.header__top .nav:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+.header__top .nav:last-child {
+  margin-right: 0;
+}
+.header__top .vertical-divider {
+  height: 25px;
+  width: 1px;
+  background-color: #ccc;
+}
+.header__top .drop-down {
+  position: relative;
+}
+.header__top .drop-down ul {
+  display: none;
+  width: 80%;
+  position: absolute;
+  top: 100%;
+  right: 20%;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 2px 8px 2px #ccc;
+  line-height: normal;
+  border-radius: 4px;
+  -webkit-animation: bounceInDown 0.2s ease-out;
+          animation: bounceInDown 0.2s ease-out;
+}
+.header__top .drop-down a {
+  width: 100%;
+  display: inline-block;
+  padding: 6px 0;
+  color: black;
+}
+.header__top .drop-down a:hover {
+  background-color: #eee;
+}
+.header__top .drop-down:hover {
+  opacity: 1;
+}
+.header__top .drop-down:hover ul {
+  display: block;
+  transform: translateY(0);
+}
+.header__top .text {
+  font-size: 12px;
+  line-height: 42px;
+}
+.header__top a {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
